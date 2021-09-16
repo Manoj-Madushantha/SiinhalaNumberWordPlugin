@@ -24,7 +24,7 @@ Sinhala Number Word Convertor is a plugin powered by WordPress.Basically, It has
 
 you can enter a number and click convert button
 you will be displayed a out put like this. 
-eg. 45670 -> à·„à¶­à·…à·’à·ƒà·Š à¶´à¶±à·Š à¶¯à·„à·ƒà·Š à·„à¶º à·ƒà·’à¶º à·„à·à¶­à·Šà¶­à·‘à·€à¶ºà·’
+eg. 45670 -> හතළිස් පන් දහස් හය සිය හැත්තෑවයි
 Only Support for 1 million. For further plugin algorithm need to be developed.
 
 ==Usage==
