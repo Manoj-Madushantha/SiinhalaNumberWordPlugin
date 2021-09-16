@@ -18,6 +18,7 @@ Sinhala Number Word Convertor
  
 
 ==Description==
+
 Sinhala Number Word Convertor is a plugin powered by WordPress.Basically, It has been developed output Sinhala word representation of a number. This plugin was developed by me to create a WordPress plugin. A plugin is a software add-on that is installed on a program, enhancing its capabilities. Sinhala Words conversion algorithm is very complex to build than the English Word Conversion Algorithm. The purpose is more of education but this algorithm can be used for cheque writer software in Sri Lanka to print Sinhala-based Number word conversion. I already developed cheque-writer software that enables Sinhala you can refer to my blog post section.
 
 ==Features==
