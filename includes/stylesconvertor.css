@@ -1,0 +1,158 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ * Tuts Form Wrap Styles
+*/
+
+
+.tuts-login-form { 
+    
+    padding:30px; 
+    
+    display:block; 
+    
+    border:1px solid #ccc;
+    
+    font-family:arial; 
+    
+    font-size:12px;
+    
+}
+
+/*
+
+Tuts Form Heading
+
+*/
+.tuts-login-heading {
+
+    font-family: arial;
+    
+    font-weight:700;
+    
+    text-transform:capitalize;
+
+}
+
+#response_area_wrapper {
+    
+	display:block;
+	
+	position:fixed;
+	
+	margin-top:100px;
+	
+	height: 150px;
+}
+
+
+#response_area {
+
+	display:block;
+	
+	position:fixed;
+	
+    font-family: arial;
+    
+    font-weight:600;
+    
+    font-size:24px;
+	
+	margin-top:100px;
+	
+	height: 150px;
+    
+}
+
+.tuts-login-heading {
+
+    display: block;
+    
+    font-family: arial;
+    
+    font-weight: 700; font-size:24px;
+    
+    margin: 0 0 20px;
+    
+    text-align: center;
+    
+    text-transform: capitalize;
+}
+
+/*
+
+Tuts Form Text Styles
+
+*/
+
+.tuts-txt {
+    
+    display: block;
+    
+    margin: 0 0 20px;
+    
+}
+
+.tuts-btn {
+    
+    display: block;
+    
+}
+
+
+.tuts-txt:after{clear:both; display:block; overflow:hidden; content:""}
+
+.tuts-txt > label {
+
+    float: left;
+    
+    width: 180px;
+
+}
+
+.tuts-txt > input { 
+    
+    border:1px solid #ccc; 
+    
+    padding:8px 5px; 
+    
+}
+
+/*
+
+Tuts Form Button
+
+*/
+.tuts-login-form .button {
+    
+    background: #fff none repeat scroll 0 0;
+    
+    border: 1px solid #fff;
+    
+    border-radius: 0; text-transform:uppercase; font-size:15px;font-family: arial;
+    
+    padding: 10px 20px;
+    
+}
+
+.tuts-login-form .button:hover {
+
+    background: #000 none repeat scroll 0 0;
+    
+    border: 1px solid #000;
+    
+    border-radius: 0;
+    
+    padding: 10px 20px;
+}
+
+.tuts-registration-form .error {
+
+    color:red;
+    
+    margin-bottom: 18px;
+
+}
+
+
+/********* End of Tuts Stylesheet *************/
