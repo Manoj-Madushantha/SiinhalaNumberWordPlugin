@@ -22,6 +22,7 @@ class Convertor {
                 return "සෘණ " . self::numberToWords(abs($number), self::$counter, self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . "යි" . PHP_EOL;
             }
         }
+        
     }
   
   function initializeTensMap(&$tensMap) {
@@ -39,7 +40,7 @@ class Convertor {
   
   function initializeTensMapDup(&$tensMapDup) {
       $tensMapDup[0] = "බිංදුව";
-      $tensMapDup[1] = "දහ";
+	  $tensMapDup[1] = "දස";
       $tensMapDup[2] = "විසි";
       $tensMapDup[3] = "තිස්";
       $tensMapDup[4] = "හතළිස්";
@@ -84,7 +85,7 @@ class Convertor {
       $unitMapDup[7] = "හත්";
       $unitMapDup[8] = "අට";
       $unitMapDup[9] = "නව";
-      $unitMapDup[10] = "දහ ";
+      $unitMapDup[10] = "දස ";
       $unitMapDup[11] = "එකොළොස්";
       $unitMapDup[12] = "දොළොස්";
       $unitMapDup[13] = "දහතුන්";
@@ -131,220 +132,435 @@ class Convertor {
       
       $words = "";
       if (intval($number / 1000000) > 0) {
+          
           self::$counter = self::$counter + 1;
+          
           if ($number % 1000000 > 0) {
+              
               self::$sep1 = False;
+              
           } else {
+              
               self::$sep1 = True;
+              
           }
+          
           if (intval($number / 1000000) < 100) {
+              
               self::$sep2 = False;
+              
           } else {
+              
               self::$sep2 = True;
+              
           }
+          
           if (self::$sep1 == False) {
-              $words = $words . self::numberToWords(intval($number / 1000000), self::$counter + 1, self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . " මිලියන ";
+              
+              $words = $words . self::numberToWords(intval($number / 1000000), self::$counter , self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . " මිලියන "
+              ;
           } else {
-              $words = $words . self::numberToWords(intval($number / 1000000), self::$counter + 1, self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . " මිලියනය ";
+			  
+              if (intval($number/1000000) == 1) {
+				  
+				  $words = $words . "මිලියනය";
+				  
+			  } else {
+				  
+              $words = $words . self::numberToWords(intval($number / 1000000), self::$counter , self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . " මිලියනය ";
+				  
+			  }
+              
           }
+          
           self::$counter = 1;
+          
           $number = $number % 1000000;
+          
       }
+      
       if (intval($number / 1000) > 0) {
+          
           self::$counter = self::$counter + 1;
+          
           if (self::$counter == 1) {
+              
               self::$entranceThousand = True;
+              
           } else {
+              
               self::$entranceThousand = False;
+              
           }
+          
           if (intval($number / 1000) == 1) {
+              
               self::$oneThousandIdentifier = True;
+              
           } else {
+              
               self::$oneThousandIdentifier = False;
+              
           }
+          
           if ($number % 1000 > 0) {
+              
               self::$sep1 = False;
+              
           } else {
+              
               self::$sep1 = True;
+              
           }
+          
           if (intval($number / 1000) < 100) {
+              
               self::$sep2 = False;
+              
           } else {
+              
               self::$sep2 = True;
+              
           }
+          
           if (intval($number / 1000) % 10 > 0) {
+              
               self::$sep3 = False;
+              
           } else {
+              
               self::$sep3 = True;
+              
           }
+          
           if (self::$sep1 == False) {
+              
               $words = $words . self::numberToWords(intval($number / 1000), self::$counter, self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . " දහස් ";
+              
           } else {
+              if (self::$entranceThousand == true && intval($number/1000) == 1) {
+				  
+				  $words = $words . "දහස";
+				  
+			  } else {
+				  
               $words = $words . self::numberToWords(intval($number / 1000), self::$counter, self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . " දහස ";
+				  
+			  }
+              
           }
+          
           self::$counter = self::$sep2?1:self::$counter;
+          
           self::$sep1 = False;
+          
           self::$sep2 = False;
+          
           self::$sep3 = False;
           
           self::$entranceThousand = False;
+          
           self::$oneThousandIdentifier = False;
+          
           $number = $number % 1000;
+          
           if ($number < 100) {
+              
               if ($number % 10 > 0) {
+                  
                   self::$sep3 = False;
+                  
               } else {
+                  
                   self::$sep3 = True;
+                  
               }
           }
       }
       if (intval($number / 100) > 0) {
+          
           self::$counter = self::$counter + 1;
+          
           if (self::$counter == 1) {
+              
               self::$entranceHundred = True;
+              
           } else {
+              
               self::$entranceHundred = False;
+              
           }
+          
           if ($number % 100 > 0) {
+              
               self::$sep1 = False;
+              
           } else {
+              
               if (self::$sep2 == False) {
+                  
                   self::$sep1 = True;
+                  
               } else {
+                  
                   self::$sep1 = False;
+                  
               }
           }
+          
           if (self::$sep1 == False) {
+              
               $words = $words . self::numberToWords(intval($number / 100), self::$counter, self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . " සිය ";
+              
           } else {
+              if (self::$entranceHundred == true && intval($number/100) == 1) {
+				  
+				  $words = $words . "සියය";
+				  
+			  } else {
+				  
               $words = $words . self::numberToWords(intval($number / 100), self::$counter, self::$sep1, self::$sep2, self::$sep3, self::$entranceHundred, self::$entranceThousand, self::$oneThousandIdentifier) . " සියය ";
+				  
+			  }
+              
           }
+          
           self::$sep1 = False;
           //self::$counter = 1;
+          
           $number = $number % 100;
+          
           self::$counter = self::$counter + 1;
+          
           if ($number < 20) {
+              
               self::$sep1 = True;
+              
           } else {
+              
               if ($number % 10 > 0) {
+                  
                   self::$sep1 = False;
+                  
               } else {
+                  
                   self::$sep1 = True;
+                  
               }
           }
       }
+      
       if ($number > 0) {
+          
           self::initializeUnitMap($unitMap);
+          
           self::initializeTensMap($tensMap);
+          
           self::initializeUnitMapDup($unitMapDup);
+          
           self::initializeTensMapDup($tensMapDup);
+          
           if ($number < 20) {
+              
               if (self::$counter > 0) {
+                  
                   if ($number == 1) {
+                      
                       if (self::$oneThousandIdentifier == False) {
+                          
                           if (self::$counter == 3 && self::$sep1 == False) {
+                              
                               $words = $words . $unitMapDup[$number];
+                              
                           } else {
+                              
                               $words = $words . $unitMap[$number];
+                              
                           }
+                          
                       } else {
+                          
                           if (self::$counter == 1) {
+                              
                               $words = $words . $unitMapDup[$number];
+                              
                           } else {
+                              
                               if (self::$counter == 2) {
+                                  
                                   $words = $words . $unitMap[$number];
+                                  
                               } else {
+                                  
                                   if (self::$counter == 3) {
+                                      
                                       $words = $words . $unitMap[$number];
+                                      
                                   } else {
+                                      
                                       $words = $words . $unitMapDup[$number];
+                                      
                                   }
                               }
                           }
                       }
+                      
                   } else {
+                      
                       if (self::$sep1 == False) {
+                          
                           if (self::$counter == 1) {
+                              
                               if (self::$entranceThousand == False) {
+                                  
                                   if (self::$entranceHundred == False) {
+                                      
                                       $words = $words . $unitMap[$number];
+                                      
                                   } else {
+                                      
                                       $words = $words . $unitMapDup[$number];
+                                      
                                   }
+                                  
                               } else {
+                                  
                                   $words = $words . $unitMapDup[$number];
+                                  
                               }
+                              
                           } else {
+                              
                               if (self::$counter == 2) {
-                                  //self::console_log(self::$counter);
+                                  
                                   $words = $words . $unitMapDup[$number];
                                   
                               } else {
+                                  
                                   $words = $words . $unitMap[$number];
-                                  //self::console_log(self::$counter);
-                              }
-                          }
-                      } else {
-                          if (self::$entranceThousand == False) {
-                              if (self::$counter == 2) {
-                                  if (self::$entranceHundred == False) {
-                                      self::console_log(self::$counter);
-                                      self::console_log(self::$sep1);
-                                      $words = $words . $unitMapDup[$number];
-                                  } else {
-                                      $words = $words . $unitMap[$number];
-                                  }
-                                  self::$entranceHundred = False;
-                              } else {
-                                  if (self::$entranceHundred == False) {
 
-                                      $words = $words . $unitMap[$number];
-                                  } else {
-                                      $words = $words . $unitMapDup[$number];
-                                  }
                               }
+                          }
+                          
+                      } else {
+                          
+                          if (self::$entranceThousand == False) {
+                              
+                              if (self::$counter == 2) {
+                                  
+                                  if (self::$entranceHundred == False) {
+                                      
+                                      $words = $words . $unitMapDup[$number];
+                                      
+                                  } else {
+                                      
+                                      $words = $words . $unitMap[$number];
+                                      
+                                  }
+                                  
+                                  self::$entranceHundred = False;
+                                  
+                              } else {
+                                  
+                                  if (self::$entranceHundred == False) {
+                                      
+                                      $words = $words . $unitMap[$number];
+                                      
+                                  } else {
+                                      
+                                      $words = $words . $unitMapDup[$number];
+                                      
+                                  }
+                                  
+                              }
+                              
                           } else {
-                              $words = $words . $unitMapDup[$number];
+                              
+							  if ($number == 4) {
+								  
+								  $words = $words . $unitMap[$number];
+								  
+							  } else {
+								  
+                              	 $words = $words . $unitMapDup[$number];
+								  
+							  }                              
                           }
                       }
                   }
+                  
               } else {
+                  
                   $words = $words . $unitMap[$number];
+                  
               }
+              
           } else {
+              
               if (self::$sep1 == False && self::$sep2 == False && self::$sep3 == False) {
+                  
                   if ($number < 100 && self::$counter == 0) {
+                      
                       if ($number % 10 > 0) {
+                          
                           $words = $words . $tensMapDup[intval($number / 10)];
+                          
                       } else {
+                          
                           $words = $words . $tensMap[intval($number / 10)];
+                          
                       }
+                      
                   } else {
+                      
                       $words = $words . $tensMapDup[intval($number / 10)];
+                      
                   }
+                  
               } else {
+                  
                   if (self::$entranceThousand == False) {
+                      
                       $words = $words . $tensMap[intval($number / 10)];
+                      
                   } else {
+                      
                       $words = $words . $tensMapDup[intval($number / 10)];
+                      
                   }
               }
+              
               if ($number % 10 > 0) {
+                  
                   if (self::$entranceThousand == False) {
+                      
                       if (self::$counter < 3) {
+                          
                           $words = $words . $unitMap[$number % 10];
+                          
                       } else {
+                          
                           if (self::$counter == 3) {
+                              
                               $words = $words . $unitMap[$number % 10];
+                              
                           } else {
+                              
                               $words = $words . $unitMapDup[$number % 10];
+                              
                           }
                       }
+                      
                   } else {
+                      
                       if ($number % 10 == 4) {
+                          
                           $words = $words . $unitMap[$number % 10];
+                          
                       } else {
+                          
                           $words = $words . $unitMapDup[$number % 10];
+                          
                       }
                   }
               }
