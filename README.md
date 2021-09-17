@@ -1,6 +1,6 @@
-"# SiinhalaNumberWordPlugin" 
+# SiinhalaNumberWordPlugin
 
-=== Plugin Name ===
+## ==Plugin Name ===
 Contributors: Manoj-Madushantha
 
 Donate link: https://www.ictknowledgehub.com/
@@ -26,7 +26,7 @@ Tools
 Sinhala Number Word Convertor
  
 
-==Description==
+## ==Description==
 
 
 Sinhala Number Word Convertor is a plugin powered by WordPress.Basically, It has been developed output Sinhala word representation of a number.
@@ -36,7 +36,7 @@ Sinhala Number Word Convertor is a plugin powered by WordPress.Basically, It has
  I already developed cheque-writer software that enables Sinhala you can refer to my blog post section.
 
 
-==Features==
+## ==Features==
 
 
 you can enter a number and click convert button
@@ -48,17 +48,17 @@ eg. 45670 -> හතළිස් පන් දහස් හය සිය හැ�
 Only Support for 1 million. For further plugin algorithm need to be developed.
 
 
-==Usage==
+## ==Usage==
 
 Create a page in wordpress
 
-paste the [sinhala-number-convertor] short code on page editor and publish.
+paste the `[sinhala-number-convertor]` short code on page editor and publish.
 
 
 
 * Plugin Name: Sinhala-Number-Word-Convertor
 
-* Plugin URI: Tools â€“ https://www.ictknowledgehub.com/557-2/
+* [Plugin URI: ](https://www.ictknowledgehub.com/557-2/) 
 
 * Description: This plugin enables users to enter numbers and get its Sinhala word representation
 
