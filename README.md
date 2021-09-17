@@ -58,7 +58,7 @@ paste the `[sinhala-number-convertor]` short code on page editor and publish.
 
 * Plugin Name: Sinhala-Number-Word-Convertor
 
-* [Plugin URI: ](https://www.ictknowledgehub.com/557-2/) 
+* Plugin URI: [https://www.ictknowledgehub.com/557-2/](https://www.ictknowledgehub.com/557-2/) 
 
 * Description: This plugin enables users to enter numbers and get its Sinhala word representation
 
