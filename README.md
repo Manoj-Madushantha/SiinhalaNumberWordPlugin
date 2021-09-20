@@ -5,7 +5,7 @@ Contributors: Manoj-Madushantha
 
 Donate link: https://www.ictknowledgehub.com/
 
-Tags: comments, spam
+Tags: comments
 
 Requires at least: 3.0.1
 
