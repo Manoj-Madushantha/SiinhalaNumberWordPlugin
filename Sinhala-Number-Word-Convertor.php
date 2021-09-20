@@ -23,7 +23,6 @@ header('Content-Type: text/html; charset=utf-8');
 
 define('TUTS_REGISTRATION_INCLUDE_URL', plugin_dir_url(__FILE__).'includes/');
 
-
 require_once('class-number-convertor.php');
 
 
@@ -31,8 +30,7 @@ require_once('class-number-convertor.php');
 
     function tuts_styl_incl() {
 
-        //wp_enqueue_style('tuts_styl_css_and_js', TUTS_REGISTRATION_INCLUDE_URL."styles.css");
-    
+        //wp_enqueue_style('tuts_styl_css_and_js', TUTS_REGISTRATION_INCLUDE_URL."styles.css");  
         //wp_enqueue_script('tuts_styl_css_and_js');
         wp_enqueue_style( 'tuts_styl_css_and_js',TUTS_REGISTRATION_INCLUDE_URL.'stylesconvertor.css', false);
 
@@ -40,9 +38,6 @@ require_once('class-number-convertor.php');
 
 //add_action('wp_footer','tuts_styl_incl');
 add_action('wp_enqueue_style', 'tuts_styl_incl');
-// function to login Shortcode
-
-
 
 wp_enqueue_script( "my-ajax-handle", TUTS_REGISTRATION_INCLUDE_URL . "ajax.js", array( "jquery" ) );
 wp_localize_script( "my-ajax-handle", "the_ajax_script", array( "ajaxurl" => admin_url( "admin-ajax.php" ) ) );
@@ -65,56 +60,50 @@ function the_action_function(){
 }
 
 
-
-
-
-// function to login Shortcode
+// function to convertor Shortcode
 
 function num_word_shortcode( $attr ) {
 
     $the_form = '
-    <div class="tuts-login-form">
+        <div class="tuts-login-form">
 
+            <div class="tuts-login-heading">
 
-        <div class="tuts-login-heading">
-
-            <h2>Sinhala Number Word Convertor</h2>
-
-        </div>
-
-        <form method="post" action="" id="loginform" name="loginform"  method = "post">
-
-            <div class="tuts-txt">
-
-                <label><?php _e("Number :","");?> </label>
-
-                <input type="text" tabindex="10" size="20" value="" class="input" id="user_login" required name="number" />
+                <h2>Sinhala Number Word Convertor</h2>
 
             </div>
 
+            <form method="post" action="" id="loginform" name="loginform"  method = "post">
 
-            <div class="tuts-btn">
-                <input name="action" type="hidden" value="the_ajax_hook" />
-                <input type="button" value="Convert"  id="submit_button" class="button" name="submit_button" onClick="submit_me();" />
+                <div class="tuts-txt">
 
-            </div>
+                    <label><?php _e("Number :","");?> </label>
 
-        </form>
+                    <input type="text" tabindex="10" size="20" value="" class="input" id="user_login" required name="number" />
 
-      	<div id="response_area_wrapper" >
-            <div id="response_area">
-                This is where we\'ll get the response
-            </div>  
-		<div>
-    </div>';
+                </div>
+
+                <div class="tuts-btn">
+                    <input name="action" type="hidden" value="the_ajax_hook" />
+                    <input type="button" value="Convert"  id="submit_button" class="button" name="submit_button" onClick="submit_me();" />
+                </div>
+
+            </form>
+
+            <div id="response_area_wrapper" >
+                <div id="response_area">
+                    This is where we\'ll get the response
+                </div>  
+            <div>
+
+        </div>';
 
     return $the_form;
 
 }
 
-//Adding login shortcode
+//Adding convertor shortcode
 
 add_shortcode( 'sinhala-number-convertor', 'num_word_shortcode' );
-
 
 ?>

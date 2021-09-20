@@ -1,6 +1,6 @@
 # SiinhalaNumberWordPlugin
 
-## ==Plugin Name ===
+## ==Plugin Name ==
 Contributors: Manoj-Madushantha
 
 Donate link: https://www.ictknowledgehub.com/
@@ -65,4 +65,3 @@ paste the `[sinhala-number-convertor]` short code on page editor and publish.
 * Version: 1.0.0
 
 * Author: Manoj Madushantha
-
