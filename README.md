@@ -1,4 +1,4 @@
-# SiinhalaNumberWordPlugin
+# SinhalaNumberWordPlugin
 
 ## ==Plugin Name ==
 Contributors: Manoj-Madushantha
