@@ -1,22 +1,21 @@
 /**
  * All of the CSS for your public-facing functionality should be
  * included in this file.
- * Tuts Form Wrap Styles
+ *Tuts Form Wrap Styles
+
 */
 
-
 .tuts-login-form { 
-    
-    padding:30px; 
-    
-    display:block; 
-    
-    border:1px solid #ccc;
-    
-    font-family:arial; 
-    
-    font-size:12px;
-    
+	
+	background-color: #D7D1D1;
+	display: block;
+	border: 1px solid #E7E9EB;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-family: arial;
+     
 }
 
 /*
@@ -24,59 +23,36 @@
 Tuts Form Heading
 
 */
-.tuts-login-heading {
-
-    font-family: arial;
-    
-    font-weight:700;
-    
-    text-transform:capitalize;
-
-}
-
-#response_area_wrapper {
-    
-	display:block;
-	
-	position:fixed;
-	
-	margin-top:100px;
-	
-	height: 150px;
-}
-
-
-#response_area {
-
-	display:block;
-	
-	position:fixed;
-	
-    font-family: arial;
-    
-    font-weight:600;
-    
-    font-size:24px;
-	
-	margin-top:100px;
-	
-	height: 150px;
-    
-}
 
 .tuts-login-heading {
-
-    display: block;
-    
+ 
     font-family: arial;
     
-    font-weight: 700; font-size:24px;
+    font-weight: 700; 
+	
+	font-size:24px;
     
     margin: 0 0 20px;
     
     text-align: center;
     
     text-transform: capitalize;
+
+}
+
+.tuts-login-heading > img {
+	
+ 	float:left; 
+	width:42px ; 
+	height:40px;
+	
+}
+
+.tuts-login-heading > h2 {
+	
+	float:left; 
+	padding-left:15px;
+
 }
 
 /*
@@ -84,7 +60,6 @@ Tuts Form Heading
 Tuts Form Text Styles
 
 */
-
 .tuts-txt {
     
     display: block;
@@ -93,50 +68,60 @@ Tuts Form Text Styles
     
 }
 
-.tuts-btn {
+.tuts-txt:after {
     
-    display: block;
+    clear:both;
+    
+    display:block;
+    
+    overflow:hidden;
+    
+    content:"";
     
 }
-
-
-.tuts-txt:after{clear:both; display:block; overflow:hidden; content:""}
-
 .tuts-txt > label {
 
-    float: left;
-    
     width: 180px;
 
 }
 
+
 .tuts-txt > input { 
+
+    border: 1px solid #0b00ff;
+     
+    padding: 8px 5px;
+
+    float: left;
     
-    border:1px solid #ccc; 
-    
-    padding:8px 5px; 
-    
+    width: 100%;
+	
+    font-size: 18px;
+	
+	font-weight: 300;
 }
+
 
 /*
 
 Tuts Form Button
 
 */
+
 .tuts-login-form .button {
+
+    background: #000fff none repeat scroll 0 0;
     
-    background: #fff none repeat scroll 0 0;
-    
-    border: 1px solid #fff;
+    border: 1px solid #ccc;
     
     border-radius: 0; text-transform:uppercase; font-size:15px;font-family: arial;
     
     padding: 10px 20px;
-    
+
 }
 
 .tuts-login-form .button:hover {
-
+    
     background: #000 none repeat scroll 0 0;
     
     border: 1px solid #000;
@@ -153,6 +138,16 @@ Tuts Form Button
     margin-bottom: 18px;
 
 }
+
+#response_area {
+
+	font-size: 30px;
+	font-weight: 200;
+	padding-top: 15px;
+	color:#076320;
+
+}
+
 
 
 /********* End of Tuts Stylesheet *************/
