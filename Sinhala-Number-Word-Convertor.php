@@ -7,7 +7,7 @@
 
 * Description: This plugins enables users to enter number and get its sinhala word representation
 
-* Version: 1.0.0
+* Version: 1.0.1
 
 * Author: Manoj Madushantha
 
@@ -112,7 +112,7 @@ class SinhalaNumberConvertor {
 
 
 				<div id="response_area">
-					<p>&#x1F920; &#9824; &#9827; &#9829; &#9830; &#8492; &#10239; &#8496; &#8460; &#8734; &#10016; &#127877; </p>	
+					<p> &#x1F920; &#9824; &#9827; &#9829; &#9830; &#8492; &#10239; &#8496; &#8460; &#8734; &#10016; &#127877; </p>	
 				</div>  
 
 
