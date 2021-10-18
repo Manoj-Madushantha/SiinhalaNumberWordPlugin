@@ -39,7 +39,7 @@ class SinhalaNumberConvertor {
 		
 		// THE AJAX ADD ACTIONS
 		add_action( "wp_ajax_the_ajax_hook", array($this, "the_action_function") );
-		add_action( "wp_ajax_nopriv_the_ajax_hook", array($this, "the_action_function")  ); // need this to serve non logged in users
+		add_action( "wp_ajax_nopriv_the_ajax_hook", array($this, "the_action_function") ); // need this to serve non logged in users
 	
 		//Adding login shortcode
 		add_shortcode( 'sinhala-number-convertor', array($this, 'num_word_shortcode') );

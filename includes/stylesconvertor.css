@@ -11,6 +11,7 @@
 	display: block;
 	border: 1px solid #E7E9EB;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+	border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 15px;
@@ -26,17 +27,7 @@ Tuts Form Heading
 
 .tuts-login-heading {
  
-    font-family: arial;
-    
-    font-weight: 700; 
-	
-	font-size:24px;
-    
-    margin: 0 0 20px;
-    
-    text-align: center;
-    
-    text-transform: capitalize;
+
 
 }
 
@@ -51,7 +42,18 @@ Tuts Form Heading
 .tuts-login-heading > h2 {
 	
 	float:left; 
+	
 	padding-left:15px;
+	
+	font-family: arial;
+    
+    font-weight: 900; 
+	
+	font-size:28px;
+    
+    margin: 0 0 20px;
+    
+    text-transform: capitalize;
 
 }
 
@@ -86,23 +88,31 @@ Tuts Form Text Styles
 }
 
 
-.tuts-txt > input { 
-
-    border: 1px solid #0b00ff;
-     
-    padding: 8px 5px;
-
-    float: left;
-    
-    width: 100%;
-	
-    font-size: 18px;
-	
-	font-weight: 300;
+.tuts-txt > input[type=text] {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #2d9fd9;
+     color: #a0d18c;  
+	 padding: 15px 5px;
+     float: left; 
+     width: 100%;	
+     font-size: 24px;
+	 font-weight: 400;
 }
 
+.tuts-txt > input[type=text]:focus {
+     outline: none;
+     border: 1px solid #a0d18c;
+     color: #2d9fd9;
+}
 
+.tuts-txt > input::placeholder {
+	padding-left: 10px;
+  	font-style: italic;
+}
 /*
+
 
 Tuts Form Button
 
@@ -110,7 +120,7 @@ Tuts Form Button
 
 .tuts-login-form .button {
 
-    background: #000fff none repeat scroll 0 0;
+    background: #000 none repeat scroll 0 0;
     
     border: 1px solid #ccc;
     
@@ -122,7 +132,7 @@ Tuts Form Button
 
 .tuts-login-form .button:hover {
     
-    background: #000 none repeat scroll 0 0;
+    background: #525252 none repeat scroll 0 0;
     
     border: 1px solid #000;
     
@@ -140,10 +150,10 @@ Tuts Form Button
 }
 
 #response_area {
-
-	font-size: 30px;
-	font-weight: 200;
-	padding-top: 15px;
+	font-family: Iskoola Pota;
+	font-size: 32px;
+	font-weight: 900;
+	padding-top: 20px;
 	color:#076320;
 
 }
