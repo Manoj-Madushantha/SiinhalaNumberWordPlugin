@@ -39,7 +39,7 @@ class SinhalaNumberConvertor {
 		
 		// THE AJAX ADD ACTIONS
 		add_action( "wp_ajax_the_ajax_hook", array($this, "the_action_function") );
-		add_action( "wp_ajax_nopriv_the_ajax_hook", array($this, "the_action_function") ); // need this to serve non logged in users
+		add_action( "wp_ajax_nopriv_the_ajax_hook", array($this, "the_action_function")  ); // need this to serve non logged in users
 	
 		//Adding login shortcode
 		add_shortcode( 'sinhala-number-convertor', array($this, 'num_word_shortcode') );
@@ -54,7 +54,7 @@ class SinhalaNumberConvertor {
     }
 	
  	function tuts_script_incl() {
-			//Adding frontend ajax from includes folder
+		//Adding frontend ajax from includes folder
        	wp_enqueue_script( "my-ajax-handle", TUTS_REGISTRATION_INCLUDE_URL . "ajax.js", array("jquery" ) );
 		wp_localize_script( "my-ajax-handle", "the_ajax_script", array( "ajaxurl" => admin_url( "admin-ajax.php" ) ) );
 	}
@@ -112,7 +112,7 @@ class SinhalaNumberConvertor {
 
 
 				<div id="response_area">
-					This is where we\'ll get the response
+					<p>&#x1F920; &#9824; &#9827; &#9829; &#9830; &#8492; &#10239; &#8496; &#8460; &#8734; &#10016; &#127877; </p>	
 				</div>  
 
 
@@ -124,6 +124,7 @@ class SinhalaNumberConvertor {
 
 }
 
-$sinhalaNumberConvertor = new SinhalaNumberConvertor();
+	$sinhalaNumberConvertor = new SinhalaNumberConvertor();
+
 
 ?>
