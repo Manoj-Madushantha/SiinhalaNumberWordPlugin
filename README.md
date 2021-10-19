@@ -3,7 +3,7 @@
 ## ==Plugin Name ==
 Contributors: Manoj-Madushantha
 
-Donate link: https://www.ictknowledgehub.com/
+Donate link: https://www.ictknowledgehub.com/donate/
 
 Tags: comments, spam
 
