@@ -118,29 +118,41 @@ Tuts Form Button
 
 */
 
-.tuts-login-form .button {
+.tuts-btn {
+	
+	padding-left:20px;
+	
+}
+
+.tuts-btn > .button {
 
     background: #000 none repeat scroll 0 0;
-    
-    border: 1px solid #ccc;
-    
-    border-radius: 0; text-transform:uppercase; font-size:15px;font-family: arial;
+      
+    border-radius: 0; 
+	
+	text-transform:uppercase; 
+	
+	font-family: arial;
+	
+	font-size:15px;
     
     padding: 10px 20px;
+	
+	border: none;
+	
+    border-radius: 3px;
 
 }
 
-.tuts-login-form .button:hover {
+.tuts-btn > .button:hover {
     
     background: #525252 none repeat scroll 0 0;
     
-    border: 1px solid #000;
+    border: none;
     
-    border-radius: 0;
-    
-    padding: 10px 20px;
-}
+    border-radius: 3px;
 
+}
 .tuts-registration-form .error {
 
     color:red;
