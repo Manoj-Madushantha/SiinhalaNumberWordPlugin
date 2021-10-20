@@ -64,8 +64,8 @@ You can see the option page. There are 4 option you can set.
  - Button Color			:	Color of the button.
  - Background Color	:	color of the background.
 
-![interface1](https://imgur.com/pxPiWfE)
+![interface1](https://i.imgur.com/pxPiWfE.jpg)
 
 you can experience new color palette feature in the WordPress.
 
-![interface2](https://imgur.com/O2WZjRy)
+![interface2](https://i.imgur.com/O2WZjRy.jpg)
