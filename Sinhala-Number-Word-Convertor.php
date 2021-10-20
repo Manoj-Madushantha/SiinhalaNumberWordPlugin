@@ -93,7 +93,9 @@ class SinhalaNumberConvertor {
 		
 		register_setting('sinhalanumberconvertorplugin', 'snc_bg_color', array('default' => '#D7D1D1') );
 		
-
+		add_settings_field('snc_result_txt_color', 'Result Text Color', array( $this, 'result_txt_color_settings_field' ), 'sinhala-number-word-convertor', 'snc_first_section');
+		
+		register_setting('sinhalanumberconvertorplugin', 'snc_result_txt_color', array('default' => '#076320') );
 	}
 	
 	function enqueue_admin_js() { 
@@ -103,23 +105,29 @@ class SinhalaNumberConvertor {
 	}
 	
 	
+	function result_txt_color_settings_field() { ?>
+		
+		<input type="text" name="snc_result_txt_color" value="<?php echo get_option('snc_result_txt_color'); ?>" class="cpa-color-picker" >
+			
+	<?php }
+	
 	
 	function title_txt_settings_field() {  ?>
 		
-		<input type="text" name="snc_title_txt_color" value="<?php echo get_option('snc_title_txt_color'); ?>" class="cpa-color-picker" >;
+		<input type="text" name="snc_title_txt_color" value="<?php echo get_option('snc_title_txt_color'); ?>" class="cpa-color-picker" >
 	
 	<?php }
 	
 	
 	function bg_btn_settings_field() {  ?>
      
-    	<input type="text" name="snc_btn_color" value="<?php echo get_option('snc_btn_color'); ?>" class="cpa-color-picker" >;
+    	<input type="text" name="snc_btn_color" value="<?php echo get_option('snc_btn_color'); ?>" class="cpa-color-picker" >
      
 	<?php }
 	
 	function bg_settings_field() {  ?>
      
-    	<input type="text" name="snc_bg_color" value="<?php echo get_option('snc_bg_color'); ?>" class="cpa-color-picker" >;
+    	<input type="text" name="snc_bg_color" value="<?php echo get_option('snc_bg_color'); ?>" class="cpa-color-picker" >
      
 	<?php }
 	
@@ -216,7 +224,7 @@ class SinhalaNumberConvertor {
 				</form>
 
 
-				<div id="response_area">
+				<div id="response_area" style="color: '. get_option("snc_result_txt_color") .'" >
 					<p> &#x1F920; &#9824; &#9827; &#9829; &#9830; &#8492; &#10239; &#8496; &#8460; &#8734; &#10016; &#127877; </p>	
 				</div>  
 
